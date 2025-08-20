@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MJ Global Technology - Providing IT solutions, web development, and training in Jega, Kebbi State, Nigeria.">
+    <meta name="keywords" content="IT solutions, web development, software, training, Kebbi State, Nigeria">
+    <meta name="author" content="MJ Global Technology">
+    <meta property="og:title" content="MJ Global Technology">
+    <meta property="og:description" content="Leading IT solutions provider in Jega, Kebbi State.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mjglobaltech.com">
+    <marque>
+        <title>MJ Global Technology</title>
+    </marque>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+        
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white p-5 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">MJ Global Technology</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="about.html" class="hover:underline">About Us</a></li>
+                    <li><a href="services.html" class="hover:underline">Services</a></li>
+                    <li><a href="team.html" class="hover:underline">Team</a></li>
+                    <li><a href="training.html" class="hover:underline">Training</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="text-center py-20 bg-blue-500 text-white fade-in">
+        <h2 class="text-4xl font-bold">Where Technology Meets Innovation</h2>
+        <p class="mt-4">Your one-stop IT solution provider in Jega, Kebbi State.</p>
+        <a href="training.html" class="mt-5 inline-block bg-white text-blue-500 px-6 py-2 rounded-full font-semibold shadow-md hover:bg-gray-200">Join Our Training Program</a>
+    </section>
+    <section id="about" class="container mx-auto py-10 px-5 fade-in">
+        <h2 class="text-3xl font-bold text-center">About Us</h2>
+        <p class="mt-4 text-center text-gray-700">At MJ Global Technology, we are committed to delivering innovative IT solutions that enhance productivity and connectivity.</p>
+    </section>
+    <section id="services" class="bg-white py-10 px-5 fade-in">
+        <h2 class="text-3xl font-bold text-center">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-semibold"><a href="software.html" class="text-blue-600 hover:underline">Software Solutions</a></h3>
+                <p>Custom software development and mobile app solutions.</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-semibold"><a href="webdev.html" class="text-blue-600 hover:underline">Web Development</a></h3>
+                <p>Building modern websites using the latest technologies.</p>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-semibold"><a href="cafe.html" class="text-blue-600 hover:underline">Internet Café Services</a></h3>
+                <p>High-speed internet access with printing and scanning options.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container mx-auto py-10 px-5 text-center fade-in">
+        <h2 class="text-3xl font-bold">Contact Us</h2>
+        <p class="mt-2">Email: mjglobaltechnology1@gmail.com | Phone: +2348160452233</p>
+    </section>
+    <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+        <p>&copy; 2024 MJ Global Technology. All rights reserved.</p>
+        <div class="flex justify-center space-x-4 mt-2">
+            <a href="#" class="hover:text-gray-300">Facebook</a>
+            <a href="#" class="hover:text-gray-300">Twitter</a>
+            <a href="https://ng.linkedin.com/in/mjglobaltech" class="hover:text-gray-300">LinkedIn</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".fade-in").forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add("show");
+                }, index * 300);
+            });
+        });
+    </script>
+</body>
+
+</html>

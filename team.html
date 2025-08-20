@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - MJ Global Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .team-member {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+        
+        .team-member.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white p-5 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Our Team</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="about.html" class="hover:underline">About Us</a></li>
+                    <li><a href="services.html" class="hover:underline">Services</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="container mx-auto py-10 px-5">
+        <h2 class="text-3xl font-bold text-center">Meet Our Team</h2>
+        <p class="mt-4 text-center text-gray-700">Our dedicated professionals working together to provide top-tier IT solutions.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center team-member" onclick="toggleInfo('ceo')">
+                <img src="images/ceo.jpg" alt="CEO" class="w-32 h-32 mx-auto rounded-full">
+                <h3 class="text-xl font-semibold mt-4">Ibrahim Nasir</h3>
+                <p>CEO & Founder</p>
+                <div id="ceo" class="hidden mt-3 text-gray-700">Ibrahim Nasir is the founder of MJ Global Technology, with expertise in IT solutions and business innovation.</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center team-member" onclick="toggleInfo('it_tech')">
+                <img src="images/staff1.jpg" alt="IT Technician" class="w-32 h-32 mx-auto rounded-full">
+                <h3 class="text-xl font-semibold mt-4">Dr. Mudassir Nasir</h3>
+                <p>IT Technician</p>
+                <div id="it_tech" class="hidden mt-3 text-gray-700">Mudassir specializes in troubleshooting, network management, and IT support.</div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center team-member" onclick="toggleInfo('web_dev')">
+                <img src="images/staff2.jpg" alt="Web Developer" class="w-32 h-32 mx-auto rounded-full">
+                <h3 class="text-xl font-semibold mt-4">Mustapha Aliyu</h3>
+                <p>Web Developer</p>
+                <div id="web_dev" class="hidden mt-3 text-gray-700">Mustapha is responsible for building and maintaining high-quality websites.</div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container mx-auto py-10 px-5 text-center">
+        <h2 class="text-3xl font-bold">Contact Us</h2>
+        <p class="mt-2">Email: mjglobaltechnology1@gmail.com | Phone: +2348160452233</p>
+    </section>
+    <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+        <p>&copy; 2024 MJ Global Technology. All rights reserved.</p>
+        <div class="flex justify-center space-x-4 mt-2">
+            <a href="#" class="hover:text-gray-300">Facebook</a>
+            <a href="#" class="hover:text-gray-300">Twitter</a>
+            <a href="#" class="hover:text-gray-300">LinkedIn</a>
+        </div>
+    </footer>
+    <script>
+        function toggleInfo(id) {
+            $('#' + id).slideToggle();
+        }
+        $(document).ready(function() {
+            $('.team-member').each(function(index) {
+                $(this).delay(300 * index).queue(function(next) {
+                    $(this).addClass('show');
+                    next();
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

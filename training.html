@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Programs - MJ Global Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        }
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white p-5 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Training Programs</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="about.html" class="hover:underline">About Us</a></li>
+                    <li><a href="services.html" class="hover:underline">Services</a></li>
+                    <li><a href="contact.html" class="hover:underline">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="container mx-auto py-10 px-5">
+        <h2 class="text-3xl font-bold text-center fade-in">Our Training Programs</h2>
+        <p class="mt-4 text-center text-gray-700 fade-in">MJ Global Technology offers hands-on training in various IT fields to empower individuals with digital skills. Below are some of the programs we offer:</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
+                <h3 class="text-xl font-semibold">Basic Computer Literacy</h3>
+                <p>Learn fundamental computer operations, Microsoft Office, and internet usage for daily tasks.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
+                <h3 class="text-xl font-semibold">Web Development</h3>
+                <p>Master HTML, CSS, JavaScript, and frameworks for building dynamic and responsive websites.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
+                <h3 class="text-xl font-semibold">Cybersecurity Essentials</h3>
+                <p>Understand cyber threats, ethical hacking, and methods for securing digital systems.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
+                <h3 class="text-xl font-semibold">Advanced Software Development</h3>
+                <p>Learn programming languages like Python, Java, and C++ for application development.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
+                <h3 class="text-xl font-semibold">IT Consultancy and Support</h3>
+                <p>Gain skills in troubleshooting, IT infrastructure setup, and enterprise solutions.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center fade-in">
+                <h3 class="text-xl font-semibold">Mobile App Development</h3>
+                <p>Build Android and iOS applications using React Native and Flutter.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="container mx-auto py-10 px-5 text-center">
+        <h2 class="text-3xl font-bold fade-in">Register for Training</h2>
+        <p class="mt-2 fade-in">Fill in the form below to enroll in any of our training programs.</p>
+        <form action="contact_form_handler.php" class="mt-6 max-w-md mx-auto fade-in">
+            <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg mb-3" required>
+            <input type="email" placeholder="Email Address" class="w-full p-3 border rounded-lg mb-3" required>
+            <input type="text" placeholder="Phone Number" class="w-full p-3 border rounded-lg mb-3" required>
+            <select class="w-full p-3 border rounded-lg mb-3" required>
+                <option value="">Select a Training Program</option>
+                <option>Basic Computer Literacy</option>
+                <option>Web Development</option>
+                <option>Cybersecurity Essentials</option>
+                <option>Advanced Software Development</option>
+                <option>IT Consultancy and Support</option>
+                <option>Mobile App Development</option>
+            </select>
+            <textarea placeholder="Why are you interested in this training?" class="w-full p-3 border rounded-lg mb-3" required></textarea>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-700">Register</button>
+        </form>
+    </section>
+    <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+        <p>&copy; 2024 MJ Global Technology. All rights reserved.</p>
+        <div class="flex justify-center space-x-4 mt-2">
+            <a href="#" class="hover:text-gray-300">Facebook</a>
+            <a href="#" class="hover:text-gray-300">Twitter</a>
+            <a href="#" class="hover:text-gray-300">LinkedIn</a>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".fade-in").forEach((element, index) => {
+                setTimeout(() => {
+                    element.classList.add("show");
+                }, index * 300);
+            });
+        });
+    </script>
+</body>
+</html>
